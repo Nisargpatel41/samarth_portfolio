@@ -122,9 +122,10 @@
       display: inline-block;
       margin-left: 10%;
       /* width: 90%; */
-      margin-top: 65%;
+      margin-top: 10%;
       margin-left: 6%;
       animation: none;
+      position: static;
     }
 
     .userContent h3 {
