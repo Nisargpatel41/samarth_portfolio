@@ -34,9 +34,9 @@
           </ul>
         </nav>
         <a
-          href=" https://polar-sands-70552.herokuapp.com/resume.pdf"
+          href="#"
           class="download-btn"
-          target="_blank"
+          onclick="downloadCV()"
         >
           Download CV <i class="fa-solid fa-download"></i>
         </a>
@@ -161,9 +161,7 @@
     <div id="contact" class="contact-container">
       <h3 class="title">Contact</h3>
       <hr class="hr" />
-      <form>
-
-        <div class="form-container">
+      <form id="form" class="form-container" onsubmit="handleSubmit(event)">
           <div class="form-group">
             <label for="name">Name:</label>
             <input
@@ -172,6 +170,7 @@
               placeholder="*Enter your name"
               name="personName"
               class="textbox"
+              required
             />
           </div>
           <div class="form-group">
@@ -182,6 +181,7 @@
               placeholder="*Enter your email"
               name="personEmail"
               class="textbox"
+              required
             />
           </div>
           <div class="form-group">
@@ -192,6 +192,7 @@
               placeholder="*Enter your contact number"
               name="personContactNumber"
               class="textbox"
+              required
             />
           </div>
           <div class="form-group">
@@ -200,7 +201,7 @@
               id="address"
               rows="6"
               placeholder="Enter your address"
-              name="personAddress"
+              name="personAddress" required
               class="textarea"></textarea>
           </div>
           <div class="form-group">
@@ -212,6 +213,7 @@
               placeholder="*Enter your city"
               name="personCity"
               class="textbox"
+              required
             />
             <datalist id="cities">
               <option value="Toronto">
@@ -229,14 +231,15 @@
               placeholder="*Enter your postal code"
               name="personPostalCode"
               class="textbox"
+              required
             />
           </div>
           <div class="form-group">
             <label for="question"><input type="radio" id="question" name="inquiryType"
-                    value="Question" onchange="handleRadioValueChange(value)" required> Question</label>
-            <label for="hiring"><input type="radio" id="hiring" name="inquiryType" value="Hiring" onchange="handleRadioValueChange(value)">
+                    value="Question" onchange="handleInquiryTypeChange(value)" required> Question</label>
+            <label for="hiring"><input type="radio" id="hiring" name="inquiryType" value="Hiring" onchange="handleInquiryTypeChange(value)">
                 Hiring</label>
-            <label for="comment"><input type="radio" id="comment" name="inquiryType" value="Comment" onchange="handleRadioValueChange(value)">
+            <label for="comment"><input type="radio" id="comment" name="inquiryType" value="Comment" onchange="handleInquiryTypeChange(value)">
                 Comment</label>
           </div>
           <div class="form-group hourlyRate">
@@ -247,6 +250,7 @@
               placeholder="*Enter hourly rate"
               name="hourlyRate"
               class="textbox"
+              required
             />
           </div>
           <div class="form-group">
@@ -255,7 +259,7 @@
               id="message"
               rows="6"
               placeholder="Enter your message"
-              name="personMessage"
+              name="personMessage" required
               class="textarea"></textarea>
           </div>
           <div class="form-group">
@@ -263,12 +267,13 @@
               type="submit"
               value="Submit"
               class="submitBtn"
+              required
             />
           </div>  
-        </div>
       </form>
     </div>
     <!-- Contact Me Ends -->
     <script src="./script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
