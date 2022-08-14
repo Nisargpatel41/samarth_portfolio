@@ -1,5 +1,10 @@
 const hourlyRateFormGroup = document.querySelector(".hourlyRate");
 const form = document.querySelector("#form");
+const eduImage = document.querySelector(".edu-image");
+const eduTitle = document.querySelector(".edu-title");
+const eduName = document.querySelector(".edu-name");
+const eduDesc = document.querySelector(".edu-desc");
+const years = document.querySelectorAll(".circle-div");
 
 
 //Submit Handler
@@ -33,7 +38,7 @@ const handleSubmit = (event) => {
     });
 };
 
-//hourly rate input toggle
+//hourly rate toggle
 const handleInquiryTypeChange = (inquiryType) => {
     if(inquiryType === "Hiring") {
         hourlyRateFormGroup.style.display = "block";
@@ -48,4 +53,36 @@ const downloadCV = () => {
     link.download = "Samarth-Resume.pdf";
     link.href = window.location.origin + "/assets/documents/Resume.pdf";
     link.click();
-  }
+}
+
+const handleEducationChange = (event) => {
+    const year = event.target.innerText;
+
+    for(const element of years) {
+        element.classList.remove("selected");
+        if(element.innerText === year) {
+            element.classList.add("selected");
+        }
+    }
+    if(year === "2019") {
+        eduImage.src = "./assets/images/experi.jpg";
+        eduTitle.innerText = "12th Grade";
+        eduName.innerText = "P.P.G Experimental High School, Patan";
+        eduDesc.innerText = "lorem ipsum";
+    }else if(year === "2020") {
+        eduImage.src = "./assets/images/gandhinagar.jpg";
+        eduTitle.innerText = "12th Grade";
+        eduName.innerText = "P.P.G Experimental High School, Patan";
+        eduDesc.innerText = "lorem ipsum";
+    }else if(year === "2021") {
+        eduImage.src = "./assets/images/seneca.jpg";
+        eduTitle.innerText = "12th Grade";
+        eduName.innerText = "P.P.G Experimental High School, Patan";
+        eduDesc.innerText = "lorem ipsum";
+    }else {
+        eduImage.src = "./assets/images/bm.jpg";
+        eduTitle.innerText = "12th Grade";
+        eduName.innerText = "P.P.G Experimental High School, Patan";
+        eduDesc.innerText = "lorem ipsum";
+    }
+}
