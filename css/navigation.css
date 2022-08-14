@@ -40,7 +40,7 @@
     font-size: large;
   }
   
-  .btn {
+  .download-btn {
     margin-left: 5%;
     padding: 10px;
     background-color: #273f5b;
@@ -72,7 +72,7 @@
     .user h2 {
       display: none;
     }
-    .btn {
+    .download-btn {
       margin-left: 20px;
       margin-top: 2px;
     }

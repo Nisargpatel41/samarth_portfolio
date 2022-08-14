@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/education.css">
+    <link rel="stylesheet" href="./css/skills.css">
+    <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <title>My Porfolio</title>
 </head>
@@ -32,7 +35,7 @@
         </nav>
         <a
           href=" https://polar-sands-70552.herokuapp.com/resume.pdf"
-          class="btn"
+          class="download-btn"
           target="_blank"
         >
           Download CV <i class="fa-solid fa-download"></i>
@@ -42,7 +45,7 @@
 
     <!-- Image Div Starts -->
 
-    <div>
+    <div class="home">
         <div class="userImageBlock">
             <img
               src="./assets/images/img.jpeg"
@@ -118,7 +121,154 @@
       </div>
     </div>
     <!-- About Me Ends -->
-    
+
+    <!-- Education Starts -->
+    <div id="education" class="education-container">
+      <h3 class="title">Education</h3>
+      <hr class="hr" />
+      <div class="years-div">
+        <div class="circle-div selected">
+          2016
+        </div>
+        <i class="fa-solid fa-greater-than"></i>
+        <div class="circle-div">
+          2019
+        </div>
+        <i class="fa-solid fa-greater-than"></i>
+        <div class="circle-div">
+          2020
+        </div>
+        <i class="fa-solid fa-greater-than"></i>
+        <div class="circle-div">
+          2021
+        </div>
+      </div>
+
+      <div class="education-detail">
+        <div class="education-image-container">
+          <img src="./assets/images/bm.jpg" alt="BM high School">
+        </div>
+        <div class="education-description">
+            <span>10th Grade</span>
+            <span>Baroda High School, Vadodara</span>
+            <span>Completed it with 85.55 percentile rank in 2018.</span>
+        </div>
+      </div>
+    </div>
+    <!-- Education Ends -->
+
+    <!-- Contact Me Stats -->
+    <div id="contact" class="contact-container">
+      <h3 class="title">Contact</h3>
+      <hr class="hr" />
+      <form>
+
+        <div class="form-container">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="*Enter your name"
+              name="personName"
+              class="textbox"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="*Enter your email"
+              name="personEmail"
+              class="textbox"
+            />
+          </div>
+          <div class="form-group">
+            <label for="number">Contact Number:</label>
+            <input
+              type="text"
+              id="number"
+              placeholder="*Enter your contact number"
+              name="personContactNumber"
+              class="textbox"
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+              <textarea
+              id="address"
+              rows="6"
+              placeholder="Enter your address"
+              name="personAddress"
+              class="textarea"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input
+              type="text"
+              id="city"
+              list="cities"
+              placeholder="*Enter your city"
+              name="personCity"
+              class="textbox"
+            />
+            <datalist id="cities">
+              <option value="Toronto">
+              <option value="Montreal">
+              <option value="Calgary">
+              <option value="Ottawa">
+              <option value="Vancouver">
+            </datalist>
+          </div>
+          <div class="form-group">
+            <label for="code">Postal Code:</label>
+            <input
+              type="text"
+              id="code"
+              placeholder="*Enter your postal code"
+              name="personPostalCode"
+              class="textbox"
+            />
+          </div>
+          <div class="form-group">
+            <label for="question"><input type="radio" id="question" name="inquiryType"
+                    value="Question" onchange="handleRadioValueChange(value)" required> Question</label>
+            <label for="hiring"><input type="radio" id="hiring" name="inquiryType" value="Hiring" onchange="handleRadioValueChange(value)">
+                Hiring</label>
+            <label for="comment"><input type="radio" id="comment" name="inquiryType" value="Comment" onchange="handleRadioValueChange(value)">
+                Comment</label>
+          </div>
+          <div class="form-group hourlyRate">
+            <label for="rate">Hourly Rate:</label>
+            <input
+              type="number"
+              id="rate"
+              placeholder="*Enter hourly rate"
+              name="hourlyRate"
+              class="textbox"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+              <textarea
+              id="message"
+              rows="6"
+              placeholder="Enter your message"
+              name="personMessage"
+              class="textarea"></textarea>
+          </div>
+          <div class="form-group">
+            <input
+              type="submit"
+              value="Submit"
+              class="submitBtn"
+            />
+          </div>  
+        </div>
+      </form>
+    </div>
+    <!-- Contact Me Ends -->
     <script src="./script.js"></script>
 </body>
 </html>
