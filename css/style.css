@@ -17,3 +17,7 @@
     font-weight: 600;
     color: #273f5b;
 }
+
+.text-center {
+    text-align: center!important;
+}

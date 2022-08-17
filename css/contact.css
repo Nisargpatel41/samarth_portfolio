@@ -67,6 +67,11 @@ label {
     .submitBtn {
       margin-top: 10px;
     }
+
+    .form-group {
+      width: inherit;
+    }
+
   }
   
   @media only screen and (max-width: 900px) and (min-width: 601px) {
@@ -80,5 +85,9 @@ label {
     }
     .submitBtn {
       margin-left: -10%;
+    }
+
+    .form-group {
+      width: inherit;
     }
   }
